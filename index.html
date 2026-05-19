@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Form migration · v1 vs v2 visual comparison batches</title>
+  <style>
+    :root {
+      --bg: #eef1f4;
+      --card: #fff;
+      --text: #111;
+      --muted: #555;
+      --accent: #1565c0;
+      --accent-strong: #0d47a1;
+      --green: #2e7d32;
+    }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .wrap {
+      max-width: 68rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    header h1 {
+      margin: 0 0 0.4rem;
+      font-size: 1.75rem;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 56rem;
+      line-height: 1.5;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem 1.25rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+      border-left: 4px solid var(--accent);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+    .card h2 a {
+      color: var(--accent-strong);
+      text-decoration: none;
+    }
+    .card h2 a:hover {
+      text-decoration: underline;
+    }
+    .card .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+    }
+    .card .lead {
+      font-size: 0.93rem;
+      line-height: 1.5;
+      color: #333;
+    }
+    .pill {
+      display: inline-block;
+      background: #e3f2fd;
+      color: var(--accent-strong);
+      border-radius: 999px;
+      padding: 0.15rem 0.6rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .pill.green {
+      background: #e8f5e9;
+      color: var(--green);
+    }
+    footer {
+      margin-top: 3rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    code {
+      background: #f3f5f7;
+      padding: 0.05rem 0.35rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Form migration · v1 vs v2 visual comparison</h1>
+      <p>
+        Per-batch reports comparing legacy (v1) Wix template form screenshots
+        against the freshly migrated (v2) form rendered at the same URL. Each
+        batch corresponds to a different set of meta-site IDs requested for QA.
+      </p>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <h2><a href="batch-1.html">Batch 1</a></h2>
+        <div class="meta">
+          <span class="pill">43 msids</span>
+          <span class="pill green">57 rows</span>
+          <span>7.9 MB</span>
+        </div>
+        <p class="lead">50 of 57 rows have a fresh new-form capture. 50 rows ship with a cached v1 baseline; 7 were already migrated when the baseline pass ran (new-only).</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="batch-2.html">Batch 2</a></h2>
+        <div class="meta">
+          <span class="pill">40 msids</span>
+          <span class="pill green">63 rows</span>
+          <span>6.5 MB</span>
+        </div>
+        <p class="lead">57 of 63 rows have a fresh new-form capture. 58 rows ship with a cached v1 baseline; 5 were new-only.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="batch-3.html">Batch 3</a></h2>
+        <div class="meta">
+          <span class="pill">19 msids</span>
+          <span class="pill green">28 rows</span>
+          <span>2.7 MB</span>
+        </div>
+        <p class="lead">27 of 28 rows have a fresh new-form capture. 27 rows ship with a cached v1 baseline; 1 was new-only.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="batch-4.html">Batch 4</a></h2>
+        <div class="meta">
+          <span class="pill">55 msids</span>
+          <span class="pill green">86 rows</span>
+          <span>12 MB</span>
+        </div>
+        <p class="lead">83 of 86 rows have a fresh new-form capture. 83 rows ship with a cached v1 baseline; 3 were new-only.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="batch-5.html">Batch 5</a></h2>
+        <div class="meta">
+          <span class="pill">35 msids</span>
+          <span class="pill green">46 rows</span>
+          <span>4.5 MB</span>
+        </div>
+        <p class="lead">46 of 46 rows have a fresh new-form capture and every row has a v1 baseline. Cleanest batch so far.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="batch-6.html">Batch 6</a></h2>
+        <div class="meta">
+          <span class="pill">94 msids</span>
+          <span class="pill green">123 rows</span>
+          <span>23 MB</span>
+        </div>
+        <p class="lead">119 of 123 rows have a fresh new-form capture. 119 rows ship with a cached v1 baseline; 4 were new-only.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="batch-7.html">Batch 7</a></h2>
+        <div class="meta">
+          <span class="pill">254 msids</span>
+          <span class="pill green">320 rows</span>
+          <span>45 MB</span>
+        </div>
+        <p class="lead">290 of 320 rows have a fresh new-form capture. 290 rows ship with a cached v1 baseline; 30 were new-only. Largest batch — heavy page, give it a moment to load.</p>
+      </article>
+    </section>
+
+    <footer>
+      <p>
+        Each report card shows the v1 baseline on the left and the v2
+        re-capture on the right. Pages without a v1 baseline (sites already
+        migrated when the baseline pass ran) display a placeholder on the
+        left and the fresh v2 capture on the right.
+      </p>
+      <p>
+        Generated by <code>_make-targeted-compare-html-batch-N.mjs</code> against
+        the Wix Forms end-to-end migration screenshot pipeline.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
